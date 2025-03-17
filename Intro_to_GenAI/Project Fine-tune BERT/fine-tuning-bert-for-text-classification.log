@@ -1,0 +1,68 @@
+12.8s 1 2025-02-13 12:01:02.098604: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+26.9s 2 Original:  deeds reason earthquake may allah forgive us
+26.9s 3 Tokenized:  ['deeds', 'reason', 'earthquake', 'may', 'allah', 'forgive', 'us']
+26.9s 4 Token IDs:  [15616, 3114, 8372, 2089, 16455, 9641, 2149]
+30.3s 5 Max sentence length:  45
+30.4s 6 Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+30.6s 7 /opt/conda/lib/python3.7/site-packages/transformers/tokenization_utils_base.py:2079: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+30.6s 8 FutureWarning,
+34.4s 9 Original:  deeds reason earthquake may allah forgive us
+34.4s 10 Token IDs: tensor([  101, 15616,  3114,  8372,  2089, 16455,  9641,  2149,   102,     0,
+34.4s 11 0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+34.4s 12 0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+34.4s 13 0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+34.4s 14 0,     0,     0,     0,     0])
+34.5s 15 6,090 training samples
+34.5s 16 1,523 validation samples
+79.1s 17 Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+79.1s 18 - This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+79.1s 19 - This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+79.1s 20 Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+79.1s 21 You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+86.1s 22 
+86.1s 23 ======== Epoch 1 / 4 ========
+86.1s 24 Training...
+119.4s 25 
+119.4s 26 Average training loss: 0.47
+119.4s 27 Training epcoh took: 0:00:33
+119.4s 28 
+119.4s 29 Running Validation...
+121.6s 30 Accuracy: 0.82
+123.0s 31 
+123.0s 32 ======== Epoch 2 / 4 ========
+123.0s 33 Training...
+155.3s 34 
+155.3s 35 Average training loss: 0.36
+155.3s 36 Training epcoh took: 0:00:32
+155.3s 37 
+155.3s 38 Running Validation...
+157.5s 39 Accuracy: 0.84
+159.2s 40 
+159.2s 41 ======== Epoch 3 / 4 ========
+159.2s 42 Training...
+191.5s 43 
+191.5s 44 Average training loss: 0.29
+191.5s 45 Training epcoh took: 0:00:32
+191.5s 46 
+191.5s 47 Running Validation...
+193.7s 48 Accuracy: 0.84
+195.4s 49 
+195.4s 50 ======== Epoch 4 / 4 ========
+195.4s 51 Training...
+227.6s 52 
+227.6s 53 Average training loss: 0.23
+227.6s 54 Training epcoh took: 0:00:32
+227.6s 55 
+227.6s 56 Running Validation...
+229.8s 57 Accuracy: 0.84
+231.3s 58 
+231.3s 59 Training complete!
+231.3s 60 Total training took 0:02:25 (h:mm:ss)
+243.0s 61 /opt/conda/lib/python3.7/site-packages/traitlets/traitlets.py:2561: FutureWarning: --Exporter.preprocessors=["remove_papermill_header.RemovePapermillHeader"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+243.0s 62 FutureWarning,
+243.0s 63 [NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+243.3s 64 [NbConvertApp] Writing 107887 bytes to __notebook__.ipynb
+244.4s 65 /opt/conda/lib/python3.7/site-packages/traitlets/traitlets.py:2561: FutureWarning: --Exporter.preprocessors=["nbconvert.preprocessors.ExtractOutputPreprocessor"] for containers is deprecated in traitlets 5.0. You can pass `--Exporter.preprocessors item` ... multiple times to add items to a list.
+244.4s 66 FutureWarning,
+244.4s 67 [NbConvertApp] Converting notebook __notebook__.ipynb to html
+245.4s 68 [NbConvertApp] Writing 393606 bytes to __results__.html
