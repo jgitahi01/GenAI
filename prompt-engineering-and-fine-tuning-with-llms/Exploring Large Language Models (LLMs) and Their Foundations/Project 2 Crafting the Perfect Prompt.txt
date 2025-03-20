@@ -1,0 +1,31 @@
+from transformers import pipeline
+
+# Load summarization model
+summarizer = pipeline("summarization")
+
+# Example article
+article = """
+Artificial intelligence is transforming industries worldwide. From healthcare to finance, AI-powered tools are automating tasks, improving efficiency, and enabling new possibilities. 
+In healthcare, AI assists doctors by analyzing medical images and predicting patient conditions. In finance, it detects fraudulent transactions and optimizes investments. 
+Despite its benefits, AI also raises ethical concerns, such as bias in algorithms and job displacement. Policymakers and researchers continue to work on balancing innovation with responsibility.
+"""
+
+# Three prompts
+generic_prompt = "Summarize this article."
+detailed_prompt = "Read the following article and provide a summary that highlights the main ideas and key takeaways. Keep the summary concise while maintaining the original meaning."
+specific_prompt = "Summarize the following article in three bullet points, each capturing a main idea. Use clear and concise language, keeping each point under 20 words. Ensure the summary is objective, avoiding opinions or unnecessary details."
+
+# Generate summaries
+generic_summary = summarizer(article, max_length=50, min_length=25, do_sample=False)[0]["summary_text"]
+detailed_summary = summarizer(detailed_prompt + " " + article, max_length=50, min_length=25, do_sample=False)[0]["summary_text"]
+specific_summary = summarizer(specific_prompt + " " + article, max_length=50, min_length=25, do_sample=False)[0]["summary_text"]
+
+# Print results
+print("\nGeneric Prompt Summary:")
+print(generic_summary)
+
+print("\nDetailed Prompt Summary:")
+print(detailed_summary)
+
+print("\nSpecific Prompt Summary:")
+print(specific_summary)
